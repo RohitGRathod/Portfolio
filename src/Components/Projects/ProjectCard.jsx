@@ -16,8 +16,8 @@ function ProjectCard({title, description,skills, imageUrl, liveUrl, codeUrl}) {
         <p><strong>Description</strong> : {description}</p>
         <div className='flex justify-between'>
           
-        <a href={liveUrl} target="_blank" className='!text-gray-200 !bg-black/25 hover:bg-blue-950 hover:border-2 border-gray-900 m-2 rounded-lg'>Visit {title}</a>
-        <a href={codeUrl} target='_blank' className='!text-gray-200 !bg-black/25 hover:bg-blue-950 hover:border-2 border-gray-900 m-2 rounded-lg p-2'>Click to view code</a>
+        <a href={liveUrl} target="_blank" className='text-gray-200 bg-black/25 hover:bg-blue-950 hover:border-2 border-gray-900 m-2 rounded-lg'>Visit {title}</a>
+        <a href={codeUrl} target='_blank' className='text-gray-200 bg-black/25 hover:bg-blue-950 hover:border-2 border-gray-900 m-2 rounded-lg p-2'>Click to view code</a>
         </div>
         </div>
     </div>

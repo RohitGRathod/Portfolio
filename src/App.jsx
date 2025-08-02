@@ -10,7 +10,6 @@ function App() {
 
     <div className='w-screen min-h-screen bg-transparent'>
     <div className=' mx-auto flex w-full'>
-
       <Header/>
     </div>
 
