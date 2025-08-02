@@ -24,7 +24,7 @@ function About() {
           <div className="mt-8">
             <button
               onClick={() => navigate('/contact-me')}
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-5 rounded-lg transition"
+              className="inline-block !bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-5 rounded-lg transition"
             >
               Get in Touch
             </button>

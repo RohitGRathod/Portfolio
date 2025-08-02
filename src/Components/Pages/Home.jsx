@@ -28,8 +28,8 @@ function Home() {
               <a href='https://www.instagram.com/rohit.rathod_45/profilecard/?igsh=MWtsdTBlbnltZWEyNA%3D%3D' target='_blank' rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} size='2x' color='white' className='p-4' /></a>
             </div>
           <div>
-            <button onClick={()=>(handleNavigation('/projects'))} className='bg-gray-600 hover:bg-black/40 hover:border-2 border-blue-800 m-2'>View My Work</button>
-            <button onClick={()=>(handleNavigation('/contact-me'))} className='bg-gray-600 hover:bg-black/40 hover:border-2 border-blue-800 m-2'>Let's Connect</button>
+            <button onClick={()=>(handleNavigation('/projects'))} className='bg-gray-600 hover:bg-black/40 hover:border-2 border-blue-800 m-2 text-white'>View My Work</button>
+            <button onClick={()=>(handleNavigation('/contact-me'))} className='bg-gray-600 hover:bg-black/40 hover:border-2 border-blue-800 m-2 text-white'>Let's Connect</button>
           </div>
           </div>
         </div>

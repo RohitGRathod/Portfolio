@@ -28,25 +28,25 @@ function Contact() {
             type='text'
             name = 'userName'
             placeholder='Your Name'
-            className='mb-4 p-2 border border-gray-300 rounded w-1/2'
+            className='mb-4 p-2 border border-gray-300 rounded w-1/2 text-gray-300 bg-gray-900'
             
           />
           <input
             type='email'
             name = 'email'
             placeholder='Your Email'
-            className='mb-4 p-2 border border-gray-300 rounded w-1/2'
+            className='mb-4 p-2 border border-gray-300 rounded w-1/2 text-gray-300 bg-gray-900'
            
           />
           <textarea
+            className='mb-4 p-2 border border-gray-300 rounded w-1/2 h-32 text-gray-300 bg-gray-900'
             placeholder='Your Message'
             name='message'
-            className='mb-4 p-2 border border-gray-300 rounded w-1/2 h-32'
            
           ></textarea>
           <button
             type='submit'
-            className='bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition duration-200'
+            className='!bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition duration-200'
           >
             Send Message
           </button>
