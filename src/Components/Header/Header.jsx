@@ -37,7 +37,7 @@ function Header() {
         navItem.map((item)=>
             <li key={item.title}>
             <button 
-            className='bg-gray-600 hover:bg-black/40 hover:border-2 border-blue-800 m-2 !text-white'
+            className='bg-gray-600 hover:bg-black/40 hover:border-2 border-blue-800 m-2'
             onClick={()=>handleOnNavigate(item.slug)}
             >
             {item.title}
