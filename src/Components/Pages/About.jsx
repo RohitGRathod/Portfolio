@@ -2,6 +2,7 @@ import React from "react";
 import SkillCard from "../Skills/SkillCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import HeroImg from "/HeroImg.jpg";
 
 function About() {
   const navigate = useNavigate();
@@ -17,14 +18,14 @@ function About() {
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         {/* Profile Image */}
-        <motion.img
-          src="/profile.jpg" // <-- replace with your image path
+        {/* <motion.img
+          src={HeroImg} // <-- replace with your image path
           alt="Rohit"
           className="w-32 h-32 rounded-full border-4 border-indigo-600 shadow-lg object-cover"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.6 }}
-        />
+        /> */}
 
         {/* About Text */}
         <motion.div
