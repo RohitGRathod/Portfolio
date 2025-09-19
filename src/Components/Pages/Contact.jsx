@@ -1,61 +1,80 @@
-import React, { useRef } from 'react'
-import emailjs from '@emailjs/browser';
-
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const form = useRef();
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    emailjs.sendForm('service_8948u28', 'template_pqcv5me', form.current, 'tpprEcsFZVc2A6ZcG')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert("Message sent successfully!");
-        form.current.reset(); // Reset the form after successful submission
-      }, (error) => {
-        console.log('FAILED...', error);
-        alert("Failed to send message. Please try again later.");
-      });
+    emailjs
+      .sendForm(
+        "service_8948u28",
+        "template_pqcv5me",
+        form.current,
+        "tpprEcsFZVc2A6ZcG"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Message sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          alert("Failed to send message. Please try again later.");
+        }
+      );
   };
+
   return (
-  <div className='flex justify-center w-11/12 min-h-screen rounded-2xl bg-black/30 m-10 '>
-      <form ref={form}   onSubmit={handleSubmit} className='w-full p-8 rounded-lg shadow-lg'>
-        
-        <div className='flex flex-col items-center justify-center min-h-screen bg-black/30 text-gray-500'>
-          <h1 className='text-3xl font-bold mb-6 text-gray-300'>Contact Me</h1>
-          <input
-            type='text'
-            name = 'userName'
-            placeholder='Your Name'
-            className='mb-4 p-2 border border-gray-300 rounded w-1/2 text-gray-300 bg-gray-900'
-            
-          />
-          <input
-            type='email'
-            name = 'email'
-            placeholder='Your Email'
-            className='mb-4 p-2 border border-gray-300 rounded w-1/2 text-gray-300 bg-gray-900'
-           
-          />
-          <textarea
-            className='mb-4 p-2 border border-gray-300 rounded w-1/2 h-32 text-gray-300 bg-gray-900'
-            placeholder='Your Message'
-            name='message'
-           
-          ></textarea>
-          <button
-            type='submit'
-            className='bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition duration-200'
-          >
-            Send Message
-          </button>
-        </div>
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
+      <form
+        ref={form}
+        onSubmit={handleSubmit}
+        className="w-11/12 md:w-8/12 lg:w-6/12 xl:w-5/12 
+          bg-gray-900/40 backdrop-blur-md rounded-2xl shadow-xl p-10
+          flex flex-col items-center gap-6 text-gray-200"
+      >
+        {/* Heading */}
+        <h1 className="text-4xl md:text-5xl font-extrabold text-indigo-400 drop-shadow-md">
+          Contact Me
+        </h1>
+
+        {/* Inputs */}
+        <input
+          type="text"
+          name="userName"
+          placeholder="Your Name"
+          className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700
+            focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-200"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700
+            focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-200"
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          className="w-full h-32 p-3 rounded-lg bg-gray-800 border border-gray-700
+            focus:outline-none focus:ring-2 focus:ring-indigo-500 text-gray-200"
+        ></textarea>
+
+        {/* Button */}
+        <button
+          type="submit"
+          className="px-6 py-3 rounded-lg font-semibold 
+            bg-gradient-to-r from-indigo-600 to-purple-600 
+            hover:from-indigo-500 hover:to-purple-500 
+            transition-transform transform hover:scale-105"
+        >
+          Send Message
+        </button>
       </form>
-      </div>
-      
-    
-  )
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;

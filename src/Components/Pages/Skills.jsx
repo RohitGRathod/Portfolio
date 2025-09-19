@@ -1,21 +1,26 @@
-import React from 'react'
-import SkillCard from '../Skills/SkillCard'
+import React from "react";
+import SkillCard from "../Skills/SkillCard";
 
 function Skills() {
-    
   return (
-    <div className='sm:w-8/12 md:w-10/12 lg:w-11/12 min-h-screen rounded-2xl bg-black/30 m-10 p-8 text-gray-300 flex flex-col items-center justify-center'>
-      <div className=' h-1/3 w-full'>
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
+      <div
+        className="w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 
+        bg-gray-900/40 backdrop-blur-md rounded-2xl shadow-xl 
+        p-10 flex flex-col items-center gap-10 text-gray-200"
+      >
+        {/* Title */}
+        <h1 className="text-4xl font-extrabold text-indigo-400 drop-shadow-md">
+          Skills
+        </h1>
 
-      <h1 className='font-2xl'>Skills</h1>
-      <div className='w-3/4 h-full text-center font-serif mb-4 rounded-2xl mt-6 lg:ml-65'>
-
-      <SkillCard />
-      </div>
+        {/* Skill Cards */}
+        <div className="w-full flex justify-center">
+          <SkillCard />
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-
-export default Skills
+export default Skills;

@@ -1,28 +1,46 @@
-import React from 'react'
-import {useNavigate,Link} from 'react-router-dom'
+import React from "react";
 
-function ProjectCard({title, description,skills, imageUrl, liveUrl, codeUrl}) {
-    const navigate = useNavigate();
-    const handleOnNavigate = (url) => {
-        navigate(url);
-    }
+function ProjectCard({ title, description, skills, imageUrl, liveUrl, codeUrl }) {
   return (
-    
-    <div className='w-full h-full bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 text-gray-400'>
-      <div className='p-2'>
-        <img src={imageUrl} alt="projectimage" className='rounded-lg'/>
-        <h2><strong>Title</strong> : {title}</h2>
-        <h3><strong>Tech Used</strong> : {skills}</h3>
-        <p><strong>Description</strong> : {description}</p>
-        <div className='flex justify-between'>
-          
-        <a href={liveUrl} target="_blank" className='text-gray-200 bg-black/25 hover:bg-blue-950 hover:border-2 border-gray-900 m-2 rounded-lg'>Visit {title}</a>
-        <a href={codeUrl} target='_blank' className='text-gray-200 bg-black/25 hover:bg-blue-950 hover:border-2 border-gray-900 m-2 rounded-lg p-2'>Click to view code</a>
+    <div className="flex flex-col bg-gray-900/60 backdrop-blur-lg 
+      border border-gray-700 rounded-2xl shadow-lg overflow-hidden 
+      hover:scale-105 transform transition duration-300">
+      
+      {/* Image */}
+      <img src={imageUrl} alt={`${title} preview`} className="h-40 w-full object-cover" />
+
+      {/* Content */}
+      <div className="p-5 flex flex-col gap-3 text-gray-300">
+        <h2 className="text-2xl font-bold text-indigo-400">{title}</h2>
+        <p className="text-sm text-gray-400">{skills}</p>
+        <p className="text-base leading-relaxed">{description}</p>
+
+        {/* Buttons */}
+        <div className="flex gap-3 mt-3">
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center px-4 py-2 rounded-lg 
+              bg-gradient-to-r from-indigo-600 to-purple-600 
+              hover:from-indigo-500 hover:to-purple-500 
+              transition font-semibold"
+          >
+            Live Demo
+          </a>
+          <a
+            href={codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center px-4 py-2 rounded-lg 
+              bg-gray-800 hover:bg-gray-700 transition font-semibold"
+          >
+            Code
+          </a>
         </div>
-        </div>
+      </div>
     </div>
-   
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
