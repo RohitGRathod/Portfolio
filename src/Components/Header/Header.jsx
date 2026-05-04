@@ -5,7 +5,7 @@ function Header() {
   const navItem = [
     { title: "Home", slug: "/" },
     { title: "About Me", slug: "/about" },
-    { title: "Skills", slug: "/skills" },
+    // { title: "Skills", slug: "/skills" },
     { title: "Projects", slug: "/projects" },
     { title: "Contact Me", slug: "/contact-me" },
   ];

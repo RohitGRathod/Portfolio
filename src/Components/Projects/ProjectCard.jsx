@@ -2,18 +2,27 @@ import React from "react";
 
 function ProjectCard({ title, description, skills, imageUrl, liveUrl, codeUrl }) {
   return (
-    <div className="flex flex-col bg-gray-900/60 backdrop-blur-lg 
+    <div className="min-w-80 flex flex-col bg-gray-900/60 backdrop-blur-lg 
       border border-gray-700 rounded-2xl shadow-lg overflow-hidden 
       hover:scale-105 transform transition duration-300">
       
       {/* Image */}
-      <img src={imageUrl} alt={`${title} preview`} className="h-40 w-full object-cover" />
+      <div className="m-2 flex justify-center items-center">
+
+      <img src={imageUrl} alt={`${title} preview`} className="w-full h-48 object-cover rounded-xl mb-3 transition-transform duration-300 hover:scale-105" />
+      </div>
+
+      <div className="flex justify-between items-center text-xs text-gray-500 mb-2 px-4">
+        <span>May 2025</span>
+        <span>June 2025</span>
+      </div>
 
       {/* Content */}
       <div className="p-5 flex flex-col gap-3 text-gray-300">
-        <h2 className="text-2xl font-bold text-indigo-400">{title}</h2>
+        <h2 className="font-bold text-xl mb-2 line-clamp-2 text-indigo-400">{title}</h2>
         <p className="text-sm text-gray-400">{skills}</p>
-        <p className="text-base leading-relaxed">{description}</p>
+        <p className="text-gray-600 text-base line-clamp-3 overflow-hidden min-h-[4.5rem]">{description}</p>
+        
 
         {/* Buttons */}
         <div className="flex gap-3 mt-3">

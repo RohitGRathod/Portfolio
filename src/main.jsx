@@ -11,7 +11,7 @@ const route=createBrowserRouter(
       <Route path="/contact-me" element={<Contact/>}/>
       <Route path="/projects" element={<Projects/>}/>
       <Route path="/about" element={<About/>}/>
-      <Route path="/skills" element={<Skill/>}/>
+      {/* <Route path="/skills" element={<Skill/>}/> */}
      
     </Route>
   )
