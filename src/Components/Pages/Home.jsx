@@ -2,7 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { useNavigate } from "react-router-dom";
-import HeroImg from "/HeroImg3.png";
+import HeroImg from "/HeroImg2.png";
+import {motion} from 'framer-motion'
 
 function Home() {
   const navigate = useNavigate();
@@ -13,12 +14,37 @@ function Home() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row sm:flex-col md:flex-col gap-1 justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
-      <div className="w-1/3 flex justify-center items-center lg:hidden" >
-        <img src={HeroImg} alt="" className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:h-[200px] md:w-[200px] rounded-full bg-gradient-to-br from-gray-900 via-black to-gray-800 " />
-      </div>
-      <div className="w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 
-         backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center gap-8 text-gray-200">
+    <section className="flex flex-col lg:flex-row sm:flex-col md:flex-col gap-1 justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800"
+    >
+      <motion.div
+              className="flex flex-col lg:flex-row sm:flex-col md:flex-col items-center gap-12 w-full 
+               p-6 sm:p-10 rounded-2xl"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+      <motion.div 
+        className="w-1/3 flex justify-center items-center lg:hidden" 
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <motion.img 
+          src={HeroImg} 
+          alt="" 
+          className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:h-[200px] md:w-[200px] rounded-full bg-gradient-to-br from-gray-900 via-black to-gray-800  shadow shadow-gray-500" 
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        />
+      </motion.div>
+      <motion.div 
+        className="w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 
+         backdrop-blur-md rounded-2xl shadow-xl flex flex-col items-center gap-8 text-gray-200"
+         initial={{ opacity: 0, y: 50 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         
         {/* Heading + Intro */}
         <div className="text-center">
@@ -79,12 +105,13 @@ function Home() {
             Let&apos;s Connect
           </button>
         </div>
-      </div>
+      </motion.div>
 
       <div className="w-1/3 lg:flex items-center hidden" >
         <img src={HeroImg} alt="" className="w-[350px] h-[350px] rounded-full bg-gradient-to-br from-gray-900 via-black to-gray-800 " />
       </div>
-    </div>
+      </motion.div>
+    </section>
   );
 }
 

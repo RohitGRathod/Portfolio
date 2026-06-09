@@ -4,6 +4,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Projects from './Pages/Projects';
 import Skill from './Pages/Skills';
+import ProjectForm from './projectForm/ProjectForm';
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     About,
     Contact,
     Projects,
-    Skill
+    Skill,
+    ProjectForm
 }

@@ -1,6 +1,7 @@
 import React from "react";
 
-function ProjectCard({ title, description, skills, imageUrl, liveUrl, codeUrl }) {
+function ProjectCard({ title, description, skills, imageUrl, liveUrl, codeUrl, startDate, endDate }) {
+  
   return (
     <div className="min-w-80 flex flex-col bg-gray-900/60 backdrop-blur-lg 
       border border-gray-700 rounded-2xl shadow-lg overflow-hidden 
@@ -13,8 +14,8 @@ function ProjectCard({ title, description, skills, imageUrl, liveUrl, codeUrl })
       </div>
 
       <div className="flex justify-between items-center text-xs text-gray-500 mb-2 px-4">
-        <span>May 2025</span>
-        <span>June 2025</span>
+        <span>{startDate}</span>
+        <span>{endDate}</span>
       </div>
 
       {/* Content */}

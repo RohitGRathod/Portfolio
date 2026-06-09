@@ -3,7 +3,7 @@ import SkillCard from "../Skills/SkillCard";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import './slider.css'
-import HeroImg from "/HeroImg.jpg";
+import HeroImg from "/HeroImg2.png";
 
 function About() {
   const navigate = useNavigate();
@@ -60,7 +60,7 @@ function About() {
           </p>
           <p className="leading-relaxed sm:text-lg md:text-xl mt-4">
             Beyond development, I enjoy{" "}
-            <span className="text-indigo-400 font-semibold">problem-solving</span> 
+            <span className="text-indigo-400 font-semibold">problem-solving </span> 
             and working with{" "}
             <span className="text-indigo-400 font-semibold">data structures in C++</span>, 
             which helps me deliver{" "}
